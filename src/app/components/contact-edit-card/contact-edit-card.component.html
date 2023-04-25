@@ -1,0 +1,51 @@
+<div class="contact-edit-card">
+    <div class="contact-edit-header ">
+        EDITION
+    </div>
+    <div class="contact-edit-content ">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="contact-edit-label">Prénom & Nom</td>
+                    <td class="contact-edit-value">
+                        <input #box type="text" placeholder="Prénom & Nom" [name]="contact.fullName" (keyup)="newContact!.fullName = box.value">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="contact-edit-label">Téléphone</td>
+                    <td class="contact-edit-value">
+                        <input #box type="text" placeholder="Téléphone" [name]="contact.phone" (keyup)="newContact!.phone = box.value">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="contact-edit-label">Email</td>
+                    <td class="contact-edit-value">
+                        <input #box type="text" placeholder="Email" [name]="contact.email" (keyup)="newContact!.email = box.value">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="contact-edit-label">Adresse</td>
+                    <td class="contact-edit-value">
+                        <input #box type="text" placeholder="Adresse" [name]="contact.address" (keyup)="newContact!.address = box.value">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="contact-edit-label">Ville</td>
+                    <td class="contact-edit-value">
+                        <input #box type="text" placeholder="Ville" [name]="contact.city" (keyup)="newContact!.city = box.value">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="contact-edit-label">Code postal</td>
+                    <td class="contact-edit-value">
+                        <input #box type="text" placeholder="Code postal" [name]="contact.zip_code" (keyup)="newContact!.zip_code = box.value">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="contact-edit-footer">
+        <button (click)="onSave(newContact!)">Sauvegarder</button>
+        <button (click)="onCancel()">Annuler</button>
+    </div>
+</div>

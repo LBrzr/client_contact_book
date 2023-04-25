@@ -18,6 +18,10 @@ export class ContactService {
     });
   }
 
+  private singleMapper(response: any) {
+    return Contact.fromJson(response.datas);
+  }
+
   getAll(): Observable<Contact[]> {
     return this.http
       .get(endpoints.contacts, {
@@ -26,12 +30,20 @@ export class ContactService {
       .pipe(map(this.mapper));
   }
 
-  getById(id: number) {
-    return this.http.get(endpoints.contacts + id);
+  getById(id: number): Observable<Contact> {
+    return this.http
+      .get(endpoints.contact + id, {
+        headers: this.auth.getHeaders(),
+      })
+      .pipe(map(this.singleMapper));
   }
 
-  update(id: number, data: object) {
-    return this.http.put(endpoints.contacts + id, data);
+  update(contact: Contact, newContact: Contact): Observable<Contact> {
+    return this.http
+      .put(endpoints.contacts + contact.id, newContact.asjson(), {
+        headers: this.auth.getHeaders(),
+      })
+      .pipe(map(this.singleMapper));
   }
 
   filter(term: string): Observable<Contact[]> {

@@ -1,0 +1,35 @@
+.contact-edit-footer  { 
+    padding: 15px 0;
+}
+.contact-edit-footer button {
+    float: right;
+    margin-left: 10px;
+}
+
+.contact-edit-content {
+    padding: 15px 0;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.contact-edit-header {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+}
+
+.contact-edit-label {
+    text-align: right;
+    font-weight: bold;
+    border-right: 1px solid #c1c1c1;
+}

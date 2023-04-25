@@ -1,0 +1,27 @@
+
+.contact-info-content{
+    margin-top: 15px;
+}
+
+.contact-info-header {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+}
+
+.contact-info-label {
+    text-align: right;
+    font-weight: bold;
+    border-right: 1px solid #c1c1c1;
+}

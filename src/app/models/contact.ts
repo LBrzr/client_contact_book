@@ -16,8 +16,11 @@ export class Contact {
   email: string;
   phone: string;
   address?: string;
-  zip_code: string;
-  city: string;
+  zip_code?: string;
+  city?: string;
+
+  initials: string = '';
+  fullName: string = '';
 
   constructor(
     id: any,
@@ -37,6 +40,13 @@ export class Contact {
     this.address = address;
     this.zip_code = zip_code;
     this.city = city;
+    this.initials = (this.firstname[0] + this.name[0]).toUpperCase();
+    this.fullName = this.firstname + ' ' + this.name;
+  }
+
+  // empty
+  static empty(id: string): Contact {
+    return new Contact(id, '', '', '', '', '', '', '');
   }
 
   // from json
@@ -57,11 +67,22 @@ export class Contact {
     );
   }
 
-  getInitials(): string {
-    return (this.firstname[0] + this.name[0]).toUpperCase();
+  getFullAddress(): string {
+    return (
+      (this.address ? this.address + ', ' : '') +
+      (this.zip_code ? this.zip_code + ', ' : '') +
+      (this.city ? this.city : '')
+    );
   }
 
-  getFullName(): string {
-    return this.firstname + ' ' + this.name;
+  asjson(): any {
+    return {
+      nom: this.fullName,
+      email: this.email,
+      tel: this.phone,
+      adresse: this.address,
+      code_postal: this.zip_code,
+      ville: this.city,
+    };
   }
 }

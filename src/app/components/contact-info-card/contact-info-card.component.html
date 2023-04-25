@@ -1,0 +1,27 @@
+<div class="contact-info-card">
+    <div class="contact-info-header ">
+        INFORMATIONS
+    </div>
+    <div class="contact-info-content ">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="contact-info-label">Prénom & Nom</td>
+                    <td class="contact-info-value">{{contact.fullName}}</td>
+                </tr>
+                <tr>
+                    <td class="contact-info-label">Téléphone</td>
+                    <td class="contact-info-value">{{contact.phone}}</td>
+                </tr>
+                <tr>
+                    <td class="contact-info-label">Email</td>
+                    <td class="contact-info-value">{{contact.email}}</td>
+                </tr>
+                <tr>
+                    <td class="contact-info-label">Adresse</td>
+                    <td class="contact-info-value">{{contact.getFullAddress()}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

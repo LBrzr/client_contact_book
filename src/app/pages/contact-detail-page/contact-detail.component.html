@@ -1,0 +1,20 @@
+<div class="detail-page">
+    <app-app-header></app-app-header>
+    <div class="detail-page-content horizontal-padded" *ngIf="contact">
+        <div class="detail-page-content-top elevated bordered spaced whiten">
+            <span>
+                <span>
+                    {{contact.firstname}}
+                </span>
+                <strong>
+                    {{contact.name.toUpperCase()}}
+                </strong>
+            </span>
+            <button (click)="edit()">Editer</button>
+        </div>
+        <div class="detail-page-content-bottom elevated bordered spaced whiten">
+            <app-contact-edit-card *ngIf="editing" [contact]="contact" [onCancel]="edit" [onSave]="update"></app-contact-edit-card>
+            <app-contact-info-card *ngIf="!editing" [contact]="contact"></app-contact-info-card>
+        </div>
+    </div>
+</div>
