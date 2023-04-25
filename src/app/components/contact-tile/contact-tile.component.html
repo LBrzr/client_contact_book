@@ -1,1 +1,23 @@
-<p>client-tile works!</p>
+<tr class="contact-tile">
+    <td>
+        <!-- circle with conact initials -->
+        <div class="contact-initials">
+            <span>{{contact.getInitials()}}</span>
+        </div>
+    </td>
+    <td class="contact-fullname">
+        {{contact.getFullName()}}
+    </td>
+    <td>
+        {{contact.address}}
+    </td>
+    <td>
+        {{contact.city}}
+    </td>
+    <td>
+        {{contact.phone}}
+    </td>
+    <td class="contact-action">
+        <a [routerLink]="'/details/'+contact.id" [state]="{'contact': contact}" class="colored">Voir</a>
+    </td>
+</tr>

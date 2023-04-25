@@ -15,7 +15,7 @@
 .contact-page-search-zone {
     padding: 35px 0 ;
     padding-bottom: 55px;
-    margin: auto 20%;
+    margin: auto 30%;
 }
 
 .contact-page-search-zone input {
@@ -27,6 +27,99 @@
     float: right;
 }
 
+table {
+    table-layout: fixed;
+    background-color: white;
+    border-spacing: 0;
+    width: 100%;
+}
+
+th {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #c1c1c1;
+    background-color: #e7e7e7;
+}
+
+thead tr th:first-child,
+tbody tr td:first-child {
+    width: 40px;
+}
+
 .spaced {
     margin: 15px 0;
+}
+
+.contact-initials {
+    border-radius: 50%;
+    padding: 10px;
+    background: #c1c1c1;
+    color: white;
+}
+
+.contact-fullname {
+
+    font-weight: bold;
+}
+
+.contact-tile {
+    padding: 10px;
+    margin: 10px;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #c1c1c1;
+    text-align: left;
+}
+
+.contact-action a {
+    float: right;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    font-size: 15px;
+    padding: 7.5px 15px 7.5px 27.5px;
+}
+
+.contact-initials {
+    border-radius: 50%;
+    padding: 10px;
+    background: #c1c1c1;
+    color: white;
+}
+
+.contact-fullname {
+
+    font-weight: bold;
+}
+
+.contact-tile {
+    padding: 10px;
+    margin: 10px;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #c1c1c1;
+    text-align: left;
+}
+
+.contact-action a {
+    float: right;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    font-size: 15px;
+    padding: 7.5px 15px 7.5px 27.5px;
 }

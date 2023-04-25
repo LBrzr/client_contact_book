@@ -1,21 +1,57 @@
 <div class="contact-page">
     <app-app-header></app-app-header>
     <div class="contact-page-content horizontal-padded">
-        <div class="contact-page-description whiten elevated spaced">Recherche d'une fiche de contact</div>
-        <div class="whiten elevated spaced">
+        <div class="contact-page-description whiten elevated bordered spaced">Recherche d'une fiche de contact</div>
+        <div class="whiten elevated spaced bordered">
             <div class="contact-page-search-zone">
                 <div>Renseigner un nom ou une dénomination</div>
-                <input #box type="text" placeholder="Nom ou dénomination" (keyup)="setTerm(box.value)">
+                <input #box type="text" placeholder="Nom ou dénomination" (keyup)="setTerm(box.value)" (keyup.enter)="search()">
                 <div class="contact-page-search-zone-button">
                     <button (click)="search()">Rechercher</button>
                 </div>
             </div>
         </div>
-        <div class="contact-page-list whiten elevated spaced">
+        <div class="contact-page-list whiten elevated spaced bordered">
             <div *ngIf="!contacts.length">Aucun résultat</div>
-            <div *ngFor="let contact of contacts">
-                <app-contact-tile [contact]="contact"></app-contact-tile>
-            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Nom</th>
+                        <th>Adresse</th>
+                        <th>Ville</th>
+                        <th>Téléphone</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let contact of contacts" class="contact-tile">
+                        <td>
+                            <!-- circle with conact initials -->
+                            <div class="contact-initials">
+                                <span>{{contact.getInitials()}}</span>
+                            </div>
+                        </td>
+                        <td class="contact-fullname">
+                            {{contact.getFullName()}}
+                        </td>
+                        <td>
+                            {{contact.address}}
+                        </td>
+                        <td>
+                            {{contact.city}}
+                        </td>
+                        <td>
+                            {{contact.phone}}
+                        </td>
+                        <td class="contact-action">
+                            <a [routerLink]="'/details/'+contact.id" [state]="{'contact': contact}" class="colored" (click)="showDetails(contact)">Voir</a>
+                        </td>
+                        <!-- <app-contact-tile *ngFor="let contact of contacts" [contact]="contact" class="contact-tile">
+                    </app-contact-tile>-->
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

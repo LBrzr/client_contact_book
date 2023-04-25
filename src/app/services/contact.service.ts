@@ -11,17 +11,19 @@ import { Contact } from '../models/contact';
 export class ContactService {
   constructor(private http: HttpClient, private auth: AuthService) {}
 
+  private mapper(response: any) {
+    // console.log('response', response);
+    return response.datas.map((contact: any) => {
+      return Contact.fromJson(contact);
+    });
+  }
+
   getAll(): Observable<Contact[]> {
     return this.http
       .get(endpoints.contacts, {
         headers: this.auth.getHeaders(),
       })
-      .pipe(
-        map((response: any) => {
-          // console.log('response', response);
-          return response.datas as Contact[];
-        })
-      );
+      .pipe(map(this.mapper));
   }
 
   getById(id: number) {
@@ -32,7 +34,11 @@ export class ContactService {
     return this.http.put(endpoints.contacts + id, data);
   }
 
-  filter(term: string) {
-    return this.http.get(endpoints.contacts + '?q=' + term);
+  filter(term: string): Observable<Contact[]> {
+    return this.http
+      .get(endpoints.contacts + '&nom=' + term /* + '&ville=' + term */, {
+        headers: this.auth.getHeaders(),
+      })
+      .pipe(map(this.mapper));
   }
 }
