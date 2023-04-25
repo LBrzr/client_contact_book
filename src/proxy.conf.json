@@ -1,0 +1,6 @@
+{
+    "/api": {
+        "target": "https://evaluation-technique.lundimatin.biz/",
+        "secure": false
+    }
+}

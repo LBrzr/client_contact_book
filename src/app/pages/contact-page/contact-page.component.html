@@ -12,8 +12,8 @@
             </div>
         </div>
         <div class="contact-page-list whiten elevated spaced">
-            <div *ngIf="!filtered_contacts.length">Aucun résultat</div>
-            <div *ngFor="let contact of filtered_contacts">
+            <div *ngIf="!contacts.length">Aucun résultat</div>
+            <div *ngFor="let contact of contacts">
                 <app-contact-tile [contact]="contact"></app-contact-tile>
             </div>
         </div>

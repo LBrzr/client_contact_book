@@ -71,7 +71,11 @@
               "browserTarget": "test-yuto:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "browserTarget": "test-yuto:build",
+            "proxyConfig": "src/proxy.conf.json"
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
