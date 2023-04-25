@@ -1,0 +1,21 @@
+<div class="contact-page">
+    <app-app-header></app-app-header>
+    <div class="contact-page-content horizontal-padded">
+        <div class="contact-page-description whiten elevated spaced">Recherche d'une fiche de contact</div>
+        <div class="whiten elevated spaced">
+            <div class="contact-page-search-zone">
+                <div>Renseigner un nom ou une dénomination</div>
+                <input #box type="text" placeholder="Nom ou dénomination" (keyup)="setTerm(box.value)">
+                <div class="contact-page-search-zone-button">
+                    <button (click)="search()">Rechercher</button>
+                </div>
+            </div>
+        </div>
+        <div class="contact-page-list whiten elevated spaced">
+            <div *ngIf="!filtered_contacts.length">Aucun résultat</div>
+            <div *ngFor="let contact of filtered_contacts">
+                <app-contact-tile [contact]="contact"></app-contact-tile>
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,20 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ClientTileComponent } from './client-tile/client-tile.component';
-import { ClientPageComponent } from './client-page/client-page.component';
+
+import { AppHeaderComponent } from './components/app-header/app-header.component';
+import { ContactTileComponent } from './components/contact-tile/contact-tile.component';
+
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClientTileComponent,
-    ClientPageComponent
+    ContactTileComponent,
+    ContactPageComponent,
+    AppHeaderComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #f5f5f5;
+}
+
+.elevated {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.colored {
+    background-color: #4c79bc;
+}
+
+.whiten {
+    background: white;
+}
+
+.horizontal-padded {
+    padding: 0 10%;
+}
