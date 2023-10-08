@@ -1,27 +1,61 @@
-# TestYuto
+# Angular Phonebook Web Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+## Project Overview
 
-## Development server
+The Angular Phonebook Web Application is a client-side web application designed to manage and organize contacts. This project provides a user-friendly interface for users to add, edit, and delete contacts seamlessly. Leveraging the power of Angular, the application delivers a dynamic and responsive experience for managing your phonebook.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+1. **Contact Management:**
+   - **Add Contacts:** Easily add new contacts to your phonebook, including details such as name, phone number, and email.
+   - **Edit Contacts:** Modify contact information whenever needed to keep your phonebook up to date.
+   - **Delete Contacts:** Remove unnecessary contacts effortlessly with a simple delete feature.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. **Search and Filter:**
+   - **Search Contacts:** Quickly find specific contacts using a search functionality.
+   - **Filter Contacts:** Organize contacts based on categories or groups for easy navigation.
 
-## Build
+3. **Responsive Design:**
+   - **Mobile-Friendly:** Enjoy a seamless experience on various devices, ensuring accessibility on both desktop and mobile platforms.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Technologies Used
 
-## Running unit tests
+- **Angular:** The core framework for building the client-side web application.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## How to Run the App
 
-## Running end-to-end tests
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/LBrzr/client_contact_book.git
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. **Navigate to the Project Folder:**
+   ```bash
+   cd client_contact_book
+   ```
 
-## Further help
+3. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. **Run the App:**
+   ```bash
+   ng serve
+   ```
+
+5. **Open the App:**
+   - Open your browser and go to `http://localhost:4200/` to access the Angular Phonebook Web Application.
+
+## Project Structure
+
+The project follows a standard Angular project structure. Key directories include:
+
+- **src:** Contains the source code for the Angular application.
+- **app:** Houses the components, services, and modules for the phonebook application.
+
+## Feedback and Contributions
+
+We welcome feedback and contributions to enhance the Angular Phonebook project. Feel free to open issues, submit pull requests, or reach out with your suggestions.
+
+Thank you for organizing your contacts with the Angular Phonebook Web Application! 📞📇
